@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package iso2859eval;
+import java.io.IOException;
+/**
+ *
+ * @author Stefanos Vogiatzoglou
+ */
+public class Iso2859Eval {
+
+    /**
+     * @param args the command line arguments
+     * @throws java.io.IOException
+     */
+    public static void main(String[] args)throws IOException {
+        
+        String file_name = "C:/Users/Stefanos/Desktop/Table_2_bin.txt";
+        
+        try{
+            ReadFile file= new ReadFile(file_name);
+            String[] aryLines=file.OpenFile();
+            for (String aryLine : aryLines) {
+                System.out.println(aryLine);
+            }
+            
+            
+        }
+        catch  (IOException e){
+                System.out.println(e.getMessage() );
+          
+               
+}
+}
+}
+  
+    
+
